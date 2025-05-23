@@ -91,6 +91,11 @@ button:hover {
 video#input_video {
   transform: translateX(-50%) scaleX(-1) !important;
 }
+@media (max-width: 768px) {
+  video#input_video {
+    transform: translateX(-50%) scaleX(-1) !important;
+  }
+}
 canvas#output_canvas {
   transform: translateX(-50%) !important;
 }
