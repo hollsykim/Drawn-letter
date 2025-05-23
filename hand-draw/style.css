@@ -172,3 +172,11 @@ canvas#output_canvas {
     font-size: 16px;
   }
 }
+
+@media (max-width: 768px) {
+  video#input_video {
+    /* translateX(-50%)는 기존 중앙 정렬 유지 */
+    transform: translateX(-50%) scaleX(-1) !important;
+    -webkit-transform: translateX(-50%) scaleX(-1) !important;
+  }
+}
