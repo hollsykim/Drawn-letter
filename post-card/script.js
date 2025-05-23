@@ -163,7 +163,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // ==== Back to Drawing ====
   backToDrawingBtn.addEventListener('click', () => {
-    window.location.href = '/Drawn-letter/hand-draw/index.html';
+    window.location.href = '/Drawn-letter/hand.draw/index.html';
   });
 
   // ==== Save as JPG ====
