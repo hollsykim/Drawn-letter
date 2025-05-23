@@ -94,3 +94,71 @@ video#input_video {
 canvas#output_canvas {
   transform: translateX(-50%) !important;
 }
+
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: black;
+  }
+
+  video#input_video,
+  canvas#output_canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw !important;
+    height: auto !important;
+    transform: scaleX(-1); /* 영상만 반전 */
+    z-index: 1;
+  }
+
+  #controls {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 16px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .qa-grid {
+    position: absolute;
+    top: 60vh;
+    left: 0;
+    width: 100vw;
+    padding: 16px;
+    background: #f5f0e6;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 5;
+  }
+
+  .qa-box p {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  .qa-input {
+    width: 100%;
+    font-size: 14px;
+    padding: 6px;
+    box-sizing: border-box;
+  }
+
+  label,
+  select,
+  input,
+  button {
+    font-size: 16px;
+  }
+}
