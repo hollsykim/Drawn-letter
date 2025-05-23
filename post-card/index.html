@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Postcard Editor</title>
+
+    <!-- flatpickr CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <!-- 프로젝트 CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="canvasContainer">
+      <canvas
+        id="postcardCanvas"
+        width="1280"
+        height="960"
+        style="width: 640px; height: 480px"
+      ></canvas>
+    </div>
+
+    <div id="controls">
+      <!-- Appearance -->
+      <div class="controls-group">
+        <label
+          >Background Color:
+          <input type="color" id="bgColor" value="#ffffff" />
+        </label>
+        <label
+          >Text Color:
+          <input type="color" id="textColor" value="#000000" />
+        </label>
+      </div>
+      <!-- Stamp -->
+      <div class="controls-group">
+        <label
+          >Stamp Date:
+          <input type="text" id="stampDate" placeholder="Select date" />
+        </label>
+        <label
+          >Stamp Text:
+          <input type="text" id="stampText" placeholder="Your text" />
+        </label>
+        <button id="stampBtn">Stamp</button>
+      </div>
+      <!-- Actions -->
+      <div class="controls-group">
+        <button id="backToDrawingBtn">Back to Drawing</button>
+        <button id="saveJpgBtn">Save as JPG</button>
+        <button id="savePngBtn">Save as PNG</button>
+      </div>
+    </div>
+
+    <!-- flatpickr + app script, deferred -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>

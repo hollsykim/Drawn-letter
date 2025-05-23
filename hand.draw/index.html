@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hand Brush Drawing</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <video id="input_video" width="727" height="479" autoplay muted></video>
+    <canvas
+      id="output_canvas"
+      width="1280"
+      height="960"
+      style="width: 640px; height: 480px"
+    ></canvas>
+
+    <div id="controls">
+      <label for="colorPicker">Brush Color:</label>
+      <input type="color" id="colorPicker" value="#ff69b4" />
+      <label for="lineWidth">Brush Size:</label>
+      <select id="lineWidth">
+        <option value="3">Thin</option>
+        <option value="5" selected>Medium</option>
+        <option value="8">Thick</option>
+        <option value="12">Extra Thick</option>
+      </select>
+      <button id="goToPostcard">Go to postcard</button>
+    </div>
+
+    <div class="qa-grid">
+      <div class="qa-box">
+        <p>
+          Q.What facial expression did I catch myself making most often today?
+          <textarea class="qa-input" data-id="qa1"></textarea>
+        </p>
+      </div>
+
+      <div class="qa-box">
+        <p>
+          Q.Which emotion is taking up the most space in me right now?
+          <textarea class="qa-input" data-id="qa2"></textarea>
+        </p>
+      </div>
+
+      <div class="qa-box">
+        <p>Q.When today did I feel my emotions most intensely?</p>
+        <textarea class="qa-input" data-id="qa3"></textarea>
+      </div>
+      <div class="qa-box">
+        <p>
+          Q.If there were a story behind my face right now, how would it begin?
+        </p>
+        <textarea class="qa-input" data-id="qa4"></textarea>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="script.js"></script>
+  </body>
+
+  <style>
+    body {
+      font-family: 'Courier Prime', monospace;
+    }
+  </style>
+</html>

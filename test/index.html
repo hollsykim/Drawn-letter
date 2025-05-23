@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Custom Stamp</title>
+    <style>
+      body {
+        font-family: 'Courier New', monospace;
+        background-color: #f2f2f2;
+        height: 100vh;
+        margin: 0;
+        position: relative;
+      }
+
+      .toolbar {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1000;
+        display: flex;
+        gap: 10px;
+      }
+
+      input[type='text'] {
+        padding: 8px;
+        font-size: 16px;
+        width: 200px;
+      }
+
+      button {
+        padding: 8px 14px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .stamp {
+        position: absolute;
+        padding: 20px 30px;
+        border: 3px dashed #000;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.7);
+        font-size: 18px;
+        color: #000;
+        text-transform: uppercase;
+        font-weight: bold;
+        transform: rotate(-10deg);
+        opacity: 0.8;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <input type="text" id="stampText" placeholder="도장에 찍을 문장 입력" />
+      <button id="stampButton">도장 찍기</button>
+    </div>
+
+    <script>
+      let isStamping = false;
+
+      const button = document.getElementById('stampButton');
+      const input = document.getElementById('stampText');
+
+      button.addEventListener('click', () => {
+        isStamping = !isStamping;
+        button.textContent = isStamping ? '도장 모드 해제' : '도장 찍기';
+      });
+
+      document.body.addEventListener('click', (e) => {
+        if (e.target.tagName === 'BUTTON' || e.target.tagName === 'INPUT')
+          return;
+        if (!isStamping) return;
+
+        const stamp = document.createElement('div');
+        stamp.className = 'stamp';
+        stamp.textContent = input.value || 'NO TEXT';
+
+        stamp.style.left = `${e.pageX - 50}px`;
+        stamp.style.top = `${e.pageY - 50}px`;
+
+        document.body.appendChild(stamp);
+      });
+    </script>
+  </body>
+</html>
