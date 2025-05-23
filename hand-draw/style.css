@@ -88,8 +88,6 @@ button:hover {
 }
 
 video#input_video {
-  transform: translateX(-50%) scaleX(-1) !important;
-}
-canvas#output_canvas {
+  /* 중앙 정렬 유지 + 스케일X 반전 제거 */
   transform: translateX(-50%) !important;
 }
