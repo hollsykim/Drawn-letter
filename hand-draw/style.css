@@ -20,7 +20,7 @@ canvas {
 
 #controls {
   position: absolute;
-  bottom: 60px;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -57,10 +57,9 @@ button:hover {
   transform: translateX(-50%);
   width: 640px;
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 2x2 구조 유지 */
   justify-content: center; /* ← 수평 정렬 */
   align-items: center; /* ← 수직 정렬 (높이 고정일 때만 효과적) */
-  gap: 16px;
+  grid-template-columns: 1fr 1fr; /* 2x2 구조 유지 */
   background-color: #f5f0e6;
   padding: 20px;
   box-sizing: border-box;
@@ -72,6 +71,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   padding: 30px;
+  align-self: start;
 }
 
 .qa-box p {
