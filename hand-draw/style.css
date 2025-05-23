@@ -101,13 +101,6 @@ video#input_video {
   transform: translateX(-50%) !important;
 }
 
-/* 모바일 화면일 때만 반전 */
-@media (max-width: 768px) {
-  video#input_video {
-    transform: translateX(-50%) scaleX(-1) !important;
-  }
-}
-
 canvas#output_canvas {
   transform: translateX(-50%) !important;
 }
