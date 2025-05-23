@@ -88,6 +88,7 @@ button:hover {
 }
 
 video#input_video {
-  /* 중앙 정렬 유지 + 스케일X 반전 제거 */
-  transform: translateX(-50%) !important;
+  /* 중앙 정렬 유지 + 좌우 반전 */
+  transform: translateX(-50%) scaleX(-1) !important;
+  -webkit-transform: translateX(-50%) scaleX(-1) !important;
 }

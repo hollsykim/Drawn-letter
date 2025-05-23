@@ -96,7 +96,7 @@ hands.onResults((results) => {
 
   // 좌표 변환
   // 수정: x축을 반전
-  const x = lm[8].x * canvasElement.width;
+  const x = (1 - lm[8].x) * canvasElement.width;
   const y = lm[8].y * canvasElement.height;
 
   if (prevX != null && prevY != null) {
