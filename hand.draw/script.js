@@ -26,7 +26,7 @@ goToPostcardBtn.addEventListener('click', () => {
   });
   localStorage.setItem('qaAnswers', JSON.stringify(answers));
   localStorage.setItem('drawing', canvasElement.toDataURL('image/png'));
-  window.location.href = '../post-card/index.html';
+  window.location.href = '/Drawn-letter/post-card/index.html';
 });
 
 const hands = new Hands({
