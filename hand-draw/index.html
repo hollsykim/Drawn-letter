@@ -11,12 +11,7 @@
 
   <body>
     <video id="input_video" width="727" height="479" autoplay muted></video>
-    <canvas
-      id="output_canvas"
-      width="1280"
-      height="960"
-      style="width: 640px; height: 480px"
-    ></canvas>
+    <canvas id="output_canvas" width="727" height="479"></canvas>
 
     <div id="controls">
       <label for="colorPicker">Brush Color:</label>
@@ -33,31 +28,22 @@
 
     <div class="qa-grid">
       <div class="qa-box">
-        <p>
-          Q.What’s one sentence that captures who you are?
-
-          <textarea class="qa-input" data-id="qa1"></textarea>
-        </p>
+        <p>What facial expression did I make the most today?</p>
+        <textarea class="qa-input" data-id="qa1"></textarea>
       </div>
-
+      <div class="qa-box">
+        <p>What word best describes how I’m feeling right now?</p>
+        <textarea class="qa-input" data-id="qa2"></textarea>
+      </div>
       <div class="qa-box">
         <p>
-          Q.When do you feel most like yourself?
-          <textarea class="qa-input" data-id="qa2"></textarea>
-        </p>
-      </div>
-
-      <div class="qa-box">
-        <p>
-          Q.Which value do you consider most important in your life at present?
+          If my current facial expression could tell a story, what would its
+          opening sentence be?
         </p>
         <textarea class="qa-input" data-id="qa3"></textarea>
       </div>
       <div class="qa-box">
-        <p>
-          Q.How would you describe who you were, who you are today, and who
-          you're becoming?
-        </p>
+        <p>What do I want to say to myself today?</p>
         <textarea class="qa-input" data-id="qa4"></textarea>
       </div>
     </div>

@@ -60,7 +60,6 @@ button:hover {
   grid-template-columns: 1fr 1fr; /* 2x2 구조 유지 */
   justify-content: center; /* ← 수평 정렬 */
   align-items: center; /* ← 수직 정렬 (높이 고정일 때만 효과적) */
-  gap: 16px;
   background-color: #f5f0e6;
   padding: 20px;
   box-sizing: border-box;
