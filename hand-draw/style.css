@@ -87,27 +87,10 @@ button:hover {
   font-size: 14px;
   outline: none;
 }
-/* ─────────────────────────────────
-   Fix Mirror: only video is mirrored,
-   canvas stays normal (even on mobile)
-───────────────────────────────── */
 
-/* 1) 전역적으로 video / canvas 분리 */
 video#input_video {
-  /* translateX(-50%) 로 중앙정렬 유지 + scaleX(-1) 로 거울 효과 */
   transform: translateX(-50%) scaleX(-1) !important;
 }
 canvas#output_canvas {
-  /* translateX(-50%) 로 중앙정렬만, 거울 효과는 없음 */
   transform: translateX(-50%) !important;
-}
-
-/* 2) 모바일용 media query 에도 똑같이 적용 */
-@media (max-width: 600px) {
-  video#input_video {
-    transform: translateX(-50%) scaleX(-1) !important;
-  }
-  canvas#output_canvas {
-    transform: translateX(-50%) !important;
-  }
 }
