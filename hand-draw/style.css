@@ -57,8 +57,10 @@ button:hover {
   transform: translateX(-50%);
   width: 640px;
   display: grid;
+  grid-template-columns: 1fr 1fr; /* 2x2 구조 유지 */
   justify-content: center; /* ← 수평 정렬 */
   align-items: center; /* ← 수직 정렬 (높이 고정일 때만 효과적) */
+  gap: 16px;
   background-color: #f5f0e6;
   padding: 20px;
   box-sizing: border-box;
@@ -69,26 +71,23 @@ button:hover {
 .qa-box {
   display: flex;
   flex-direction: column;
-  padding: 30px;
-  align-self: start;
+  padding: 20px;
 }
 
 .qa-box p {
   font-size: 14px;
   margin-bottom: 10px;
+  letter-spacing: -0.5px; /* ← 자간 줄이기 */
 }
 
 .qa-input {
+  height: 60px;
   resize: none;
   border: none;
   background: transparent;
   font-family: serif;
   font-size: 14px;
   outline: none;
-}
-
-video#input_video {
-  /* 중앙 정렬 유지 + 좌우 반전 */
-  transform: translateX(-50%) scaleX(-1) !important;
-  -webkit-transform: translateX(-50%) scaleX(-1) !important;
+  padding: 5px 0;
+  letter-spacing: -0.5px; /* ← 자간 줄이기 */
 }
