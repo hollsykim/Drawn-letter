@@ -1,10 +1,10 @@
 body {
   margin: 0;
-  background-color: #000;
   font-family: sans-serif;
   overflow: hidden;
   position: relative;
   height: 100vh;
+  background-color: #000;
 }
 
 video,
@@ -59,7 +59,7 @@ button:hover {
   display: grid;
   grid-template-columns: 1fr 1fr; /* 2x2 구조 유지 */
   justify-content: center; /* ← 수평 정렬 */
-  align-items: center; /* ← 수직 정렬 (높이 고정일 때만 효과적) */
+  align-items: flex-start;
   background-color: #f5f0e6;
   padding: 20px;
   box-sizing: border-box;
@@ -88,5 +88,4 @@ button:hover {
   font-size: 14px;
   outline: none;
   padding: 5px 0;
-  letter-spacing: -0.5px; /* ← 자간 줄이기 */
 }
